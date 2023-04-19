@@ -5,6 +5,6 @@ import React, {Component} from "react";
     }
 
     render() {
-        return <p>This is Create Room Page.</p>    
+        return <p>This is Create Room Page.</p>;    
     }
  }
