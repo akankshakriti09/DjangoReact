@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import { FormLabel } from "@mui/material";
 
  export default class CreateRoomPage extends Component {
     defaultVotes = 2;
@@ -20,10 +21,27 @@ import FormControlLabel from "@mui/material/FormControlLabel";
     render() {
         return ( 
           <Grid container spacing={1}>
-             <Grid item xs={120} align="center">
+             <Grid item xs={12} align="center">
                 <Typography component="h4" variant="h4">
                     Create A Room
                 </Typography>
+             </Grid>
+             <Grid item xs={12} align="center">
+                <FormControl component="fieldset">
+                    <FormHelperText>
+                        <div align="center">Guest Control of Playback State</div>
+                    </FormHelperText>
+                    <RadioGroup row defaultValue="true">
+                      <FormControlLabel value="true" control={<Radio color="primary" />}
+                        label="Play/Pause"
+                        labelPlacement="bottom" 
+                      />
+                      <FormControlLabel value="false" control={<Radio color="secondary" />}
+                        label="No Control"
+                        labelPlacement="bottom" 
+                      />
+                    </RadioGroup>
+                </FormControl>
              </Grid>
           </Grid>
         );    
